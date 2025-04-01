@@ -130,7 +130,7 @@ document.getElementById("language").addEventListener("change", function() {
     const lang = this.value;
     const translations = {
       pt: {
-        page_title: "Meu Portfólio",
+        page_title: "Pedro de Oliveira - Portfólio",
         logo: "Pedro de Oliveira",
         nav_career: "Carreira e Projetos",
         nav_skills: "Habilidades",
@@ -197,7 +197,7 @@ document.getElementById("language").addEventListener("change", function() {
         contact_subtitle: "Oportunidades de trabalho remoto ou híbrido em São Paulo"
       },
       en: {
-        page_title: "My Portfolio",
+        page_title: "Pedro de Oliveira's Portfolio",
         logo: "Pedro de Oliveira",
         nav_career: "Career & Projects",
         nav_skills: "Skills",
