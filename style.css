@@ -488,9 +488,10 @@ nav ul li a:hover {
     transform: translateY(0);
 }
 
-.skill-card:hover {
-    transform: translateY(-12px); /* -10px → -12px */
-}
+/*
+/*.skill-card:hover {
+/*    transform: translateY(-12px); /* -10px → -12px */
+/*}
 
 /* Layout interno dos cards */
 .skill-card-content {
@@ -574,10 +575,10 @@ nav ul li a:hover {
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.programming-skill-card:hover {
-    transform: translateY(-12px); /* -10px → -12px */
-    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3); /* 0 8px 15px → aproximado 0 10px 18px */
-}
+/*.programming-skill-card:hover {
+/*    transform: translateY(-12px); /* -10px → -12px */
+/*    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3); /* 0 8px 15px → aproximado 0 10px 18px */
+/*}*/
 
 .programming-skill-card img {
     width: 72px; /* 60px → 72px */
