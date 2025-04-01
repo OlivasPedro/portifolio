@@ -1,0 +1,815 @@
+/* Importando a fonte Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Corpo da página */
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho */
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(7px);
+    border-radius: 14px;
+    padding: 18px 30px;
+    width: 90%;
+    max-width: 1200px;
+    min-width: 320px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow: hidden;
+}
+
+/* Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+/* Menu */
+nav {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    flex-wrap: nowrap;
+}
+
+nav ul li a {
+    font-size: 18px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: font-size 0.3s ease, font-weight 0.3s ease;
+}
+
+nav ul li a:hover {
+    font-size: 19px;
+    font-weight: bold;
+}
+
+/* Seletor de idioma */
+#language {
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+}
+
+#language option {
+    background: grey;
+    color: white;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 1024px) {
+    header {
+        padding: 8px 20px;
+    }
+    
+    .logo {
+        font-size: 22px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    #language {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 6px 15px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+
+    #language {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    nav ul li a {
+        font-size: 12px;
+    }
+
+    #language {
+        font-size: 10px;
+        padding: 3px 6px;
+    }
+}
+
+
+/* Seção de Introdução */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 20px;
+    height: 100vh;
+    background-color: #000000;
+    text-align: left;
+    color: white;
+    animation: fadeIn 1s ease-out;
+}
+
+.intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.photo {
+    width: 40%;
+    position: relative;
+    top: 0;
+}
+
+.photo img {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.photo::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    border-radius: 10px;
+}
+
+.intro-text {
+    width: 50%;
+    padding-left: 30px;
+}
+
+.intro-text h1 {
+    font-size: 46px;
+    width: 70%;
+}
+
+.intro-text a {
+    margin-bottom: 20px;
+}
+
+.intro-text p {
+    font-size: 23px;
+    width: 80%;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.open-to-work {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    width: max-content;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: normal;
+    color: white;
+    padding: 5px 10px;
+    border: 1px solid grey;
+    border-radius: 15px;
+}
+
+.dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: green;
+    margin-right: 8px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.7; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.text {
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.text:hover {
+    color: #FFFFFF;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.scroll-to-career {
+    font-size: 114px;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    margin-top: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.scroll-to-career span {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.scroll-to-career img {
+    margin-left: 0px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(-2px); }
+    50% { transform: translateY(2px); }
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 1080px; /* 900px * 1.2 */
+    margin: 0 auto;
+    padding: 24px; /* 20px * 1.2 */
+}
+
+.timeline-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-line {
+    position: absolute;
+    width: 4px; /* 3px * 1.2 ≈ 3.6, arredondado para 4px */
+    height: 100%;
+    background: #333;
+    left: 10%;
+    top: 0;
+    transform: translateX(-50%);
+    transition: background 1s ease;
+}
+
+/* Itens da timeline padrão (deslizam de baixo para cima) */
+.timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(24px); /* 20px * 1.2 */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.timeline-item.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-item.active .timeline-dot {
+    background: rgb(255, 255, 255);
+}
+
+.timeline-dot {
+    width: 22px; /* 18px * 1.2 ≈ 21.6, arredondado para 22px */
+    height: 22px;
+    background: #333;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    transform: translateX(-50%);
+    z-index: 10;
+    transition: background 0.3s ease;
+}
+
+.timeline-content {
+    background: transparent;
+    padding: 0;
+    border-radius: 10px; /* 8px * 1.2 ≈ 9.6, arredondado para 10px */
+    max-width: 720px; /* 600px * 1.2 */
+    text-align: left;
+    margin-left: 15%;
+    margin-bottom: 5%;
+    font-size: 22px; /* 18px * 1.2 ≈ 21.6, arredondado para 22px */
+}
+
+.timeline-content p {
+    margin-top: 18px; /* 15px * 1.2 */
+}
+
+.timeline-title-subtitle {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+
+.timeline-title-subtitle h3 {
+    font-weight: bold;
+    color: white;
+    font-size: 38px; /* 32px * 1.2 ≈ 38.4, arredondado para 38px */
+    width: max-content;
+}
+
+.timeline-title-subtitle h4 {
+    margin-left: 18px; /* 15px * 1.2 */
+    color: white;
+    font-weight: bold;
+    font-size: 19px; /* 16px * 1.2 ≈ 19.2, arredondado para 19px */
+}
+
+/* Estilização dos projetos (transição lateral) */
+.timeline-project {
+    margin-top: 18px; /* 15px * 1.2 */
+    border: 1px solid white; /* opte por aumentar se desejar */
+    border-radius: 18px; /* 15px * 1.2 */
+    padding: 36px 0 36px 36px; /* 30px * 1.2 */
+    opacity: 0;
+    transform: translateX(60px); /* 50px * 1.2 */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.timeline-project.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-project-content {
+    display: flex;
+}
+
+.timeline-project-content-text {
+    color: white;
+    font-weight: bold;
+    width: 50%;
+    font-size: 22px; /* 18px * 1.2 */
+}
+
+.timeline-project-content-img {
+    display: flex;
+}
+
+/* Quando o item está ativo, a bolinha muda */
+.timeline-item.active .timeline-dot {
+    background: rgb(255, 255, 255);
+}
+
+
+
+/* Seção de Habilidades */
+.skills-section {
+    padding: 120px 24px; /* 100px → 120px e 20px → 24px */
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(24px); /* 20px → 24px */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.skills-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skills-section h2 {
+    font-size: 43px;
+    margin: 30px auto 36px auto; /* 30px de margem superior, auto para centralizar horizontalmente, 36px inferior */
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Container dos cards */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas */
+    gap: 24px; /* 20px → 24px */
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* Cards de habilidades */
+.skill-card {
+    border: 1px solid white;
+    border-radius: 18px; /* 15px → 18px */
+    padding: 24px; /* 20px → 24px */
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    max-width: 384px; /* 320px → 384px */
+    background: none;
+    opacity: 0;
+    transform: translateY(24px); /* 20px → 24px */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.skill-card.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.skill-card:hover {
+    transform: translateY(-12px); /* -10px → -12px */
+}
+
+/* Layout interno dos cards */
+.skill-card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skill-card-text {
+    color: white;
+    font-weight: normal;
+    text-align: center;
+}
+
+.skill-card-text h3 {
+    font-size: 36px; /* 30px → 36px */
+    margin-bottom: 12px; /* 10px → 12px */
+}
+
+.skill-card-text p {
+    font-size: 19px; /* 16px → 19px */
+    margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .skill-card-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.programming-skills-section {
+    text-align: center;
+    padding: 60px 24px; /* 50px → 60px e 20px → 24px */
+    background-color: transparent;
+    opacity: 0;
+    transform: translateY(36px); /* 30px → 36px */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.programming-skills-section h2 {
+    margin-bottom: 36px; /* 30px → 36px */
+}
+
+.programming-skills-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.programming-skills-wrapper {
+    display: inline-block;
+    background-color: #222;
+    border-radius: 18px; /* 15px → 18px */
+    padding: 24px 48px; /* 20px 40px → 24px 48px */
+    margin: 0 auto;
+}
+
+.programming-skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px; /* 20px → 24px */
+}
+
+.programming-skill-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #333;
+    border-radius: 12px; /* 10px → 12px */
+    padding: 18px; /* 15px → 18px */
+    width: 144px; /* 120px → 144px */
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.3); /* 0 4px 6px → aproximado 0 5px 7px */
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.programming-skill-card:hover {
+    transform: translateY(-12px); /* -10px → -12px */
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.3); /* 0 8px 15px → aproximado 0 10px 18px */
+}
+
+.programming-skill-card img {
+    width: 72px; /* 60px → 72px */
+    height: 72px; /* 60px → 72px */
+    margin-bottom: 12px; /* 10px → 12px */
+}
+
+.programming-skill-card span {
+    color: white;
+    font-size: 22px; /* 18px → 22px */
+    font-weight: bold;
+}
+
+.programming-skill-card.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+
+/* Estilo para a seção "Sobre Mim" */
+.about-me-section {
+    padding: 50px 20px;
+    text-align: left;
+    background-color: transparent; /* Fundo transparente */
+    border-radius: 15px;
+    margin: 30px auto;
+    width: 80%; /* Limita a largura */
+    max-width: 1200px; /* Máximo de 1200px */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    display: flex;
+}
+
+.about-me-section-column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Quando a seção está ativa */
+.about-me-section.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-me-section-introduction {
+    color: white;  /* Texto branco */
+    background-color: transparent; /* Fundo transparente */
+    width: 96%;
+    
+}
+
+.about-me-section-introduction h1{
+    font-weight: bold;
+    font-size: 38px;
+}
+
+.about-me-section-introduction p{
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.about-me-section-formation {
+    background-color: transparent; /* Fundo transparente */
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about-me-section-formation h1{
+    font-weight: bold;
+    font-size: 38px;
+}
+
+.about-me-section-formation-card h1{
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.about-me-section-formation-card h2{
+    font-weight: normal;
+    font-size: 22px;
+}
+
+.about-me-section-formation-card h3{
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.about-me-section-photos {
+    display: flex;
+    align-items: stretch; /* Mantém todas as fotos alinhadas */
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid white;
+    flex-grow: 1;
+    margin-right: 30px;
+    height: auto; /* Ajusta automaticamente */
+}
+
+.about-me-photo-grid {
+    width: 250px; /* Largura fixa da foto grande */
+    height: auto; /* Ajusta conforme necessário */
+    overflow: hidden;
+    border-radius: 15px;
+    flex-shrink: 0;
+}
+
+.about-me-photo-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.about-me-photo-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Ocupa o espaço restante */
+    gap: 10px;
+}
+
+.about-me-photo-row {
+    display: flex;
+    flex: 1; /* Divide o espaço igualmente */
+    gap: 10px;
+}
+
+.about-me-photo-row img {
+    width: 50%; /* Cada imagem ocupa metade da linha */
+    height: auto; /* Mantém a proporção */
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.contact-section-wrapper {
+    width: 100%; /* Faz o fundo ocupar toda a largura da tela */
+    background-color: #191818; /* Fundo cinza */
+    padding: 50px 0; /* Espaçamento superior e inferior */
+}
+
+.contact-section {
+    width: 80%; /* Limita a largura do conteúdo para 80% */
+    max-width: 1200px; /* Máximo de 1200px */
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 20px; /* Adiciona um pouco de padding nas laterais */
+    text-align: left; /* Alinha o texto à esquerda */
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna */
+}
+
+.contact-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom:0px;
+}
+
+.contact-section a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.contact-tittle {
+    display: flex;
+    gap: 10px; /* Espaço entre os itens */
+    align-items: baseline; /* Alinha os itens verticalmente no centro */
+}
+
+.contact-tittle h2 {
+    color: white;
+    font-weight: bold;
+}
+
+.contact-tittle h3 {
+    color: white;
+    font-weight: bold;
+    font-size: small;
+}
+
+.contact-tittle p {
+    color: white;
+    font-weight: normal;
+}
+
+/* Alinha os links à direita */
+.contact-links {
+    margin-left: auto; /* Isso move a .contact-links para a direita */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Estilo para os links */
+.contact-links p {
+    color: white;
+    font-weight: normal;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-links p:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do texto ao passar o mouse */
+}
+
+/* Estilo para os ícones */
+.social-icons {
+    display: flex;
+    gap: 15px; /* Espaço entre os ícones */
+}
+
+.social-icons a {
+    color: white; /* Cor dos ícones */
+    font-size: 1.5rem; /* Tamanho dos ícones */
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2); /* Aumenta os ícones ao passar o mouse */
+}
+
