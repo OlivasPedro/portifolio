@@ -34,10 +34,14 @@ document.addEventListener("DOMContentLoaded", function () {
     checkVisibility();
 });
 
-// Função para rolagem suave até a seção de carreira/projetos
+// Função para rolagem suave até a seção de carreira/projetos, ajustando 80px para o cabeçalho
 function scrollToCareer() {
     const careerSection = document.getElementById("career_projects");
-    careerSection.scrollIntoView({ behavior: "smooth" });
+
+    window.scrollTo({
+        top: careerSection.offsetTop - 80, // Ajusta conforme o cabeçalho fixo
+        behavior: "smooth"
+    });
 }
 
 // Animação da seção de habilidades
