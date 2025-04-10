@@ -1,354 +1,437 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title data-i18n="page_title">Pedro de Oliveira - Portfólio</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-  <link rel="icon" type="image/jpeg" href="images/eu-pandeiro.jpeg">
-</head>
-<body>
-  <header>
-    <div>
-      <a href="#home" class="logo" data-i18n="logo">Pedro de Oliveira</a>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="#career_projects" data-i18n="nav_career">Carreira e Projetos</a></li>
-        <li><a href="#skills" data-i18n="nav_skills">Habilidades</a></li>
-        <li><a href="#about" data-i18n="nav_about">Sobre mim</a></li>
-        <li><a href="#contact" data-i18n="nav_contact">Contatos</a></li>
-      </ul>
-    </nav>
-    <select id="language">
-      <option value="pt">PT-BR</option>
-      <option value="en">EN</option>
-    </select>
-  </header>
+  <!DOCTYPE html>
+  <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="page_title">Pedro de Oliveira - Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" type="image/jpeg" href="images/eu-pandeiro.jpeg">
+  </head>
+  <body>
+    <header>
+      <div>
+        <a href="#home" class="logo" data-i18n="logo">Pedro de Oliveira</a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#career_projects" data-i18n="nav_career">Carreira e Projetos</a></li>
+          <li><a href="#skills" data-i18n="nav_skills">Habilidades</a></li>
+          <li><a href="#about" data-i18n="nav_about">Sobre mim</a></li>
+          <li><a href="#contact" data-i18n="nav_contact">Contatos</a></li>
+        </ul>
+      </nav>
+      <select id="language">
+        <option value="pt">PT-BR</option>
+        <option value="en">EN</option>
+      </select>
+    </header>
 
-  <!-- Seção Intro -->
-  <section id="home" class="intro">
-    <div class="intro-container">
-      <div class="photo">
-        <img src="images/eu-pandeiro.jpeg" alt="Pedro de Oliveira">
-      </div>
-      <div class="intro-text">
-        <h1 data-i18n="intro_h1">Opa, tudo bem? Eu sou o Pedro de Oliveira</h1>
-        <a href="https://wa.me/+5511956546614" target="_blank" class="open-to-work">
-          <div class="dot"></div>
-          <span class="text" data-i18n="intro_open_to_work">Open to Work</span>
-        </a>
-        <p data-i18n="intro_p">
-          Um desenvolvedor apaixonado por técnologia, trabalhando cada vez mais para fazer a sonhos virarem realidade!
-        </p>
-        <div class="scroll-to-career" onclick="scrollToCareer()">
-          <span data-i18n="scroll_to_career">Vamos lá!</span>
-          <!-- Imagem da setinha -->
-          <img src="images/down-arrow.png" alt="Setinha para baixo" style="width: 24px; height: 24px;">
+    <!-- Seção Intro -->
+    <section id="home" class="intro">
+      <div class="intro-container">
+        <div class="photo">
+          <img src="images/eu-pandeiro.jpeg" alt="Pedro de Oliveira">
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção Timeline / Carreira e Projetos -->
-  <section id="career_projects" class="timeline">
-    <div class="timeline-container">
-      <div class="timeline-line"></div>
-
-      <!-- Timeline Item 1 -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-title-subtitle">
-            <h3 data-i18n="timeline1_title">Como tudo começou</h3>
-            <h4 data-i18n="timeline1_subtitle">Julho de 2020 - Rapido BR</h4>
-          </div>
-          <p data-i18n="timeline1_p1">
-            Minha jornada como desenvolvedor começou na Rapido BR, uma pequena empresa onde eu era o único desenvolvedor. Esse período foi fundamental, 
-            pois tive que aprender muitas coisas sozinho e, ao mesmo tempo, aplicar o conhecimento de forma prática. Apesar das dificuldades, 
-            foi uma experiência extremamente recompensadora.
-          </p>
-          <p data-i18n="timeline1_p2">
-            Tive participação direta no desenvolvimento de apps para controle de estoque, controle de carga e carregamento, além de realizar modificações em um sistema de impressão de QR Codes para impressoras Zebra. 
-            Esse foi o momento em que a transição da minha vida escolar para a adulta começou.
-          </p>
-        </div>
-      </div>
-
-      <!-- Timeline Item 2 - Projeto #1 -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h2 data-i18n="timeline2_title">Projeto #1</h2>
-          <div class="timeline-project">
-            <div class="timeline-project-content">
-              <div class="timeline-project-content-text">
-                <h3 data-i18n="timeline2_subtitle">
-                  Desenvolvimento de apps para controle de carga e estoque
-                </h3>
-              </div>
-              <div class="timeline-project-content-img">
-                <!-- Imagem ou conteúdo do projeto -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Timeline Item 3 -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-title-subtitle">
-            <h3 data-i18n="timeline3_title">Expandindo Horizontes</h3>
-            <h4 data-i18n="timeline3_subtitle">Agosto de 2021 - Wizard</h4>
-          </div>
-          <p data-i18n="timeline3_p1">
-            Após um período desafiador na Rapido BR, decidi sair da minha zona de conforto e explorar o campo do ensino. Trabalhei como professor de inglês na Wizard, onde vivenciei meu maior crescimento interpessoal.
-          </p>
-          <p data-i18n="timeline3_p2">
-            Foi uma oportunidade para desenvolver habilidades de trabalho em equipe, comunicação e liderança. Além disso, a experiência me ajudou a perder a timidez e a aprimorar minhas habilidades no idioma inglês.
-          </p>
-        </div>
-      </div>
-
-      <!-- Timeline Item 4 -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <div class="timeline-title-subtitle">
-            <h3 data-i18n="timeline4_title">"O bom filho a casa torna"</h3>
-            <h4 data-i18n="timeline4_subtitle">Agosto de 2024 - Rapido BR (novamente)</h4>
-          </div>
-          <p data-i18n="timeline4_p1">
-            A paixão por tecnologia nunca deixou de me acompanhar, então em agosto de 2024, voltei à Rapido BR, desta vez com novas responsabilidades e desafios. Nesse período, refatorei códigos em Java para Kotlin, desenvolvi aplicativos para iOS utilizando Swift e implementei controle de versões com Git.
-          </p>
-          <p data-i18n="timeline4_p2">
-            Também criei uma automação para envio de emails com dados de mercadorias e desenvolvi APIs com Python. Atualmente, estou focado no desenvolvimento de um app para confirmação de entrega de cargas e em buscar novos desafios para aplicar meu conhecimento e continuar crescendo.
-          </p>
-        </div>
-      </div>
-
-      <!-- Timeline Item 5 - Projeto #2 -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h2 data-i18n="timeline5_title">Projeto #2</h2>
-          <div class="timeline-project">
-            <div class="timeline-project-content">
-              <div class="timeline-project-content-text">
-                <h3 data-i18n="timeline5_subtitle">
-                  Desenvolvimento de app para controle de carregamento (Android & iOS).
-                </h3>
-              </div>
-              <div class="timeline-project-content-img">
-                <!-- Imagem ou conteúdo do projeto -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Timeline Item 6 - Projeto #3 -->
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h2 data-i18n="timeline6_title">Projeto #3</h2>
-          <div class="timeline-project">
-            <div class="timeline-project-content">
-              <div class="timeline-project-content-text">
-                <h3 data-i18n="timeline6_subtitle">
-                  Refatoração e Migração do app de controle de carga e estoque.
-                </h3>
-              </div>
-              <div class="timeline-project-content-img">
-                <!-- Imagem ou conteúdo do projeto -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Seção de Habilidades -->
-  <section id="skills" class="skills-section">
-    <h2 data-i18n="skills_title">Habilidades</h2>
-    <div class="skills-container">
-      <div class="skill-card">
-        <div class="skill-card-content">
-          <div class="skill-card-text">
-            <h3 data-i18n="skill1_title">Clean Architecture</h3>
-            <p data-i18n="skill1_desc">
-              Aplicação de princípios arquiteturais como SOLID e separação de responsabilidades para criar código modular, testável e sustentável.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="skill-card">
-        <div class="skill-card-content">
-          <div class="skill-card-text">
-            <h3 data-i18n="skill2_title">APIs</h3>
-            <p data-i18n="skill2_desc">
-              Desenvolvimento e consumo de APIs RESTful e GraphQL para integrar aplicações de forma eficiente e escalável.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="skill-card">
-        <div class="skill-card-content">
-          <div class="skill-card-text">
-            <h3 data-i18n="skill3_title">Git</h3>
-            <p data-i18n="skill3_desc">
-              Uso avançado de Git para versionamento de código, trabalho colaborativo e integração contínua com GitHub/GitLab.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="skill-card">
-        <div class="skill-card-content">
-          <div class="skill-card-text">
-            <h3 data-i18n="skill4_title">SQL</h3>
-            <p data-i18n="skill4_desc">
-              Modelagem, manipulação e otimização de bancos de dados relacionais. Experiência com SQLite, Room e consultas eficientes para alta performance.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção de Ferramentas de Programação -->
-  <section id="programming-skills" class="programming-skills-section">
-    <h2 data-i18n="prog_skills_title">Principais Ferramentas de Programação</h2>
-    <div class="programming-skills-wrapper">
-      <div class="programming-skills-container">
-        <div class="programming-skill-card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" />
-          <span data-i18n="prog_kotlin">Kotlin</span>
-        </div>
-        <div class="programming-skill-card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" />         
-          <span data-i18n="prog_swift">Swift</span>
-        </div>
-        <div class="programming-skill-card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-          <span data-i18n="prog_python">Python</span>
-        </div>
-        <div class="programming-skill-card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-          <span data-i18n="prog_javascript">JavaScript</span>
-        </div>
-        <div class="programming-skill-card">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
-          <span data-i18n="prog_csharp">C#</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção Sobre Mim e Formações -->
-  <section id="about" class="about-me-section">
-    <div class="about-me-section-column">
-      <div class="about-me-section-introduction">
-        <h1 data-i18n="about_title">Sobre Mim</h1>
-        <p data-i18n="about_desc">
-          Meu nome é Pedro de Oliveira Guimarães, tenho 22 anos e moro em Guarulhos, Brasil. 
-          Sou formado em Análise e Desenvolvimento de Sistemas e aficionado por técnologia. Tento ser músico nas horas vagas, 
-          amo automobilismo e adoro uma boa conversa. 
-          O que mais me motiva é viver novas experiências, tentar coisas novas e aplicar meus conhecimentos de forma que faça sentido além do meu próprio mundo. 
-          Quando sobra um tempo, gosto de sair com os amigos, curtir uma música e viver o momento com minha família e namorada.
-        </p>
-      </div>
-      <div class="about-me-section-photos">
-        <!-- Foto Grande -->
-        <div class="about-me-photo-grid">
-          <img src="images/eu1.jpeg" alt="Foto 1">
-        </div>
-        <!-- Fotos Pequenas -->
-        <div class="about-me-photo-column">
-          <div class="about-me-photo-row">
-            <img src="images/eu2.jpg" alt="Foto 2">
-            <img src="images/eu4.jpg" alt="Foto 3">
-          </div>
-          <div class="about-me-photo-row">
-            <img src="images/eu3.jpg" alt="Foto 2">
-            <img src="images/eu5.jpg" alt="Foto 3">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="about-me-section-formation">
-      <h1 data-i18n="formation_title">Formações</h1>
-      <div class="about-me-section-formation-card">
-        <h1 data-i18n="formation1_title">Ensino Médio Técnico em Informática</h1>
-        <h3 data-i18n="formation1_subtitle">Ensino médio (2018 - 2020)</h3>
-        <h2 data-i18n="formation1_institution">Colégio Eniac</h2>
-      </div>
-      <div class="about-me-section-formation-card">
-        <h1 data-i18n="formation2_title">Análise e Desenvolvimento de Sistemas</h1>
-        <h3 data-i18n="formation2_subtitle">Graduado (2023 - 2024)</h3>
-        <h2 data-i18n="formation2_institution">FIAP</h2>
-      </div>
-      <div class="about-me-section-formation-card">
-        <h1 data-i18n="formation3_title">Java Programmer</h1>
-        <h3 data-i18n="formation3_subtitle">Curso (2018)</h3>
-        <h2 data-i18n="formation3_institution">Impacta</h2>
-      </div>
-      <div class="about-me-section-formation-card">
-        <h1 data-i18n="formation4_title">Android Programmer</h1>
-        <h3 data-i18n="formation4_subtitle">Curso (2019)</h3>
-        <h2 data-i18n="formation4_institution">Impacta</h2>
-      </div>
-      <div class="about-me-section-formation-card">
-        <h1 data-i18n="formation5_title">English Proficiency</h1>
-        <h3 data-i18n="formation5_subtitle">Curso (2019)</h3>
-        <h2 data-i18n="formation5_institution">Wizard</h2>
-      </div>
-    </div>
-  </section>
-
-  <!-- Seção de Contato -->
-  <section id="contact" class="contact-section-wrapper">
-    <div class="contact-section">
-      <div class="contact-tittle">
-        <h2 data-i18n="contact_title">Entre em Contato</h2>
-        <p data-i18n="contact_desc">Tem alguma dúvida ou quer falar comigo?</p>
-        <div class="contact-links">
-          <a href="mailto:pedrooliveiraguimares@gmail.com">
-            <p>pedrooliveiraguimares@gmail.com</p>
+        <div class="intro-text">
+          <h1 data-i18n="intro_h1">Opa, tudo bem? Eu sou o Pedro de Oliveira</h1>
+          <a href="https://wa.me/+5511956546614" target="_blank" class="open-to-work">
+            <div class="dot"></div>
+            <span class="text" data-i18n="intro_open_to_work">Open to Work</span>
           </a>
-          <!-- Ícones sociais -->
-          <div class="social-icons">
-            <a href="https://linkedin.com/in/olivas-pedro" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://github.com/OlivasPedro" target="_blank">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://wa.me/+5511956546614" target="_blank">
-              <i class="fab fa-whatsapp"></i>
-            </a>
+          <p data-i18n="intro_p">
+            Um desenvolvedor apaixonado por técnologia, trabalhando cada vez mais para fazer a sonhos virarem realidade!
+          </p>
+          <div class="scroll-to-career" onclick="scrollToCareer()">
+            <span data-i18n="scroll_to_career">Vamos lá!</span>
+            <!-- Imagem da setinha -->
+            <img src="images/down-arrow.png" alt="Setinha para baixo" style="width: 24px; height: 24px;">
           </div>
         </div>
       </div>
-      <div class="contact-tittle">
-        <a href="https://wa.me/+5511956546614" target="_blank" class="open-to-work">
-          <div class="dot"></div>
-          <span class="text" data-i18n="contact_open_to_work">Open to Work</span>
-        </a>
-        <h3 data-i18n="contact_subtitle">
-          Oportunidades de trabalho remoto ou híbrido em São Paulo
-        </h3>
+    </section>
+
+    <!-- Seção Timeline / Carreira e Projetos -->
+    <section id="career_projects" class="timeline">
+      <div class="timeline-container">
+        <div class="timeline-line"></div>
+
+        <!-- Timeline Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-title-subtitle">
+              <h3 data-i18n="timeline1_title">Como tudo começou</h3>
+              <h4 data-i18n="timeline1_subtitle">Julho de 2020 - Rapido BR</h4>
+            </div>
+            <p data-i18n="timeline1_p1">
+              Minha jornada como desenvolvedor começou na Rapido BR, uma pequena empresa onde eu era o único desenvolvedor. Esse período foi fundamental, 
+              pois tive que aprender muitas coisas sozinho e, ao mesmo tempo, aplicar o conhecimento de forma prática. Apesar das dificuldades, 
+              foi uma experiência extremamente recompensadora.
+            </p>
+            <p data-i18n="timeline1_p2">
+              Tive participação direta no desenvolvimento de apps para controle de estoque, controle de carga e carregamento, além de realizar modificações em um sistema de impressão de QR Codes para impressoras Zebra. 
+              Esse foi o momento em que a transição da minha vida escolar para a adulta começou.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2 - Projeto #1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2 data-i18n="timeline2_title">Projeto #1</h2>
+            <div class="timeline-project">
+              <div class="timeline-project-content">
+                <div class="timeline-project-content-text">
+                  <h3 data-i18n="timeline2_subtitle">
+                    Desenvolvimento de apps para controle de carga e estoque
+                  </h3>
+                  <a href="#" class="btn-ver-projeto" onclick="abrirPopup()"">➜ Ver projeto</a>
+                </div>
+                <div class="timeline-project-content-img">
+                  <img src="images/app1.jpeg" alt="Imagem do Projeto" class="project-img-overflow">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-title-subtitle">
+              <h3 data-i18n="timeline3_title">Expandindo Horizontes</h3>
+              <h4 data-i18n="timeline3_subtitle">Agosto de 2021 - Wizard</h4>
+            </div>
+            <p data-i18n="timeline3_p1">
+              Após um período desafiador na Rapido BR, decidi sair da minha zona de conforto e explorar o campo do ensino. Trabalhei como professor de inglês na Wizard, onde vivenciei meu maior crescimento interpessoal.
+            </p>
+            <p data-i18n="timeline3_p2">
+              Foi uma oportunidade para desenvolver habilidades de trabalho em equipe, comunicação e liderança. Além disso, a experiência me ajudou a perder a timidez e a aprimorar minhas habilidades no idioma inglês.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 4 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-title-subtitle">
+              <h3 data-i18n="timeline4_title">"O bom filho a casa torna"</h3>
+              <h4 data-i18n="timeline4_subtitle">Agosto de 2024 - Rapido BR (novamente)</h4>
+            </div>
+            <p data-i18n="timeline4_p1">
+              A paixão por tecnologia nunca deixou de me acompanhar, então em agosto de 2024, voltei à Rapido BR, desta vez com novas responsabilidades e desafios. Nesse período, refatorei códigos em Java para Kotlin, desenvolvi aplicativos para iOS utilizando Swift e implementei controle de versões com Git.
+            </p>
+            <p data-i18n="timeline4_p2">
+              Também criei uma automação para envio de emails com dados de mercadorias e desenvolvi APIs com Python. Atualmente, estou focado no desenvolvimento de um app para confirmação de entrega de cargas e em buscar novos desafios para aplicar meu conhecimento e continuar crescendo.
+            </p>
+          </div>
+        </div>
+
+        <!-- Timeline Item 5 - Projeto #2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2 data-i18n="timeline5_title">Projeto #2</h2>
+            <div class="timeline-project">
+              <div class="timeline-project-content">
+                <div class="timeline-project-content-text">
+                  <h3 data-i18n="timeline5_subtitle">
+                    Desenvolvimento de app para controle de carregamento (Android & iOS).
+                  </h3>
+                  <a href="#" class="btn-ver-projeto">➜ Ver projeto</a>
+                </div>
+                <div class="timeline-project-content-img">
+                  <img src="images/app2.jpeg" alt="Imagem do Projeto" class="project-img-overflow">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 6 - Projeto #3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2 data-i18n="timeline6_title">Projeto #3</h2>
+            <div class="timeline-project">
+              <div class="timeline-project-content">
+                <div class="timeline-project-content-text">
+                  <h3 data-i18n="timeline6_subtitle">
+                    Refatoração e Migração do app de controle de carga e estoque.
+                  </h3>
+                  <a href="#" class="btn-ver-projeto">➜ Ver projeto</a>
+                </div>
+                <div class="timeline-project-content-img">
+                  <img src="images/app3.jpeg" alt="Imagem do Projeto" class="project-img-overflow">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 7 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-title-subtitle">
+              <h3 data-i18n="timeline4_title">E também...</h3>
+              <h4 data-i18n="timeline4_subtitle">Janeiro de 2025 - FlyingStudio</h4>
+            </div>
+            <p data-i18n="timeline4_p1">
+              Desenvolvi um aplicativo para tótens interativos em parceria com a FlyingStudio, voltado à apresentação de um novo empreendimento imobiliário.
+            <p data-i18n="timeline4_p2">
+              O app permite aos usuários explorar o prédio por meio de imagens, tour 360° e informações detalhadas sobre a construção, criando uma experiência imersiva e moderna para visitantes.
+            </p>
+          </div>
+        </div>
+
+        
+        <!-- Timeline Item 8 - Projeto #3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h2 data-i18n="timeline6_title">Projeto #4</h2>
+            <div class="timeline-project">
+              <div class="timeline-project-content">
+                <div class="timeline-project-content-text">
+                  <h3 data-i18n="timeline6_subtitle">
+                    Desenvolvimento do app para tótens
+                  </h3>
+                  <a href="https://www.flyingstudio.com.br/vilaprudente" class="btn-ver-projeto" target="_blank">➜ Ver projeto</a>
+                </div>
+                <div class="timeline-project-content-img">
+                  <img src="images/app4.png" alt="Imagem do Projeto" class="project-img-overflow-site">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Seção de Habilidades -->
+    <section id="skills" class="skills-section">
+      <h2 data-i18n="skills_title">Habilidades</h2>
+      <div class="skills-container">
+        <div class="skill-card">
+          <div class="skill-card-content">
+            <div class="skill-card-text">
+              <h3 data-i18n="skill1_title">Clean Architecture</h3>
+              <p data-i18n="skill1_desc">
+                Aplicação de princípios arquiteturais como SOLID e separação de responsabilidades para criar código modular, testável e sustentável.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-card-content">
+            <div class="skill-card-text">
+              <h3 data-i18n="skill2_title">APIs</h3>
+              <p data-i18n="skill2_desc">
+                Desenvolvimento e consumo de APIs RESTful e GraphQL para integrar aplicações de forma eficiente e escalável.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-card-content">
+            <div class="skill-card-text">
+              <h3 data-i18n="skill3_title">Git</h3>
+              <p data-i18n="skill3_desc">
+                Uso avançado de Git para versionamento de código, trabalho colaborativo e integração contínua com GitHub/GitLab.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-card">
+          <div class="skill-card-content">
+            <div class="skill-card-text">
+              <h3 data-i18n="skill4_title">SQL</h3>
+              <p data-i18n="skill4_desc">
+                Modelagem, manipulação e otimização de bancos de dados relacionais. Experiência com SQLite, Room e consultas eficientes para alta performance.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Ferramentas de Programação -->
+    <section id="programming-skills" class="programming-skills-section">
+      <h2 data-i18n="prog_skills_title">Principais Ferramentas de Programação</h2>
+      <div class="programming-skills-wrapper">
+        <div class="programming-skills-container">
+          <div class="programming-skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" />
+            <span data-i18n="prog_kotlin">Kotlin</span>
+          </div>
+          <div class="programming-skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" />         
+            <span data-i18n="prog_swift">Swift</span>
+          </div>
+          <div class="programming-skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+            <span data-i18n="prog_python">Python</span>
+          </div>
+          <div class="programming-skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+            <span data-i18n="prog_javascript">JavaScript</span>
+          </div>
+          <div class="programming-skill-card">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" />
+            <span data-i18n="prog_csharp">C#</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Sobre Mim e Formações -->
+    <section id="about" class="about-me-section">
+      <div class="about-me-section-column">
+        <div class="about-me-section-introduction">
+          <h1 data-i18n="about_title">Sobre Mim</h1>
+          <p data-i18n="about_desc">
+            Meu nome é Pedro de Oliveira Guimarães, tenho 22 anos e moro em Guarulhos, Brasil. 
+            Sou formado em Análise e Desenvolvimento de Sistemas e aficionado por técnologia. Tento ser músico nas horas vagas, 
+            amo automobilismo e adoro uma boa conversa. 
+            O que mais me motiva é viver novas experiências, tentar coisas novas e aplicar meus conhecimentos de forma que faça sentido além do meu próprio mundo. 
+            Quando sobra um tempo, gosto de sair com os amigos, curtir uma música e viver o momento com minha família e namorada.
+          </p>
+        </div>
+        <div class="about-me-section-photos">
+          <!-- Foto Grande -->
+          <div class="about-me-photo-grid">
+            <img src="images/eu1.jpeg" alt="Foto 1">
+          </div>
+          <!-- Fotos Pequenas -->
+          <div class="about-me-photo-column">
+            <div class="about-me-photo-row">
+              <img src="images/eu2.jpg" alt="Foto 2">
+              <img src="images/eu4.jpg" alt="Foto 3">
+            </div>
+            <div class="about-me-photo-row">
+              <img src="images/eu3.jpg" alt="Foto 2">
+              <img src="images/eu5.jpg" alt="Foto 3">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="about-me-section-formation">
+        <h1 data-i18n="formation_title">Formações</h1>
+        <div class="about-me-section-formation-card">
+          <h1 data-i18n="formation2_title">Análise e Desenvolvimento de Sistemas</h1>
+          <h3 data-i18n="formation2_subtitle">Graduado (2023 - 2024)</h3>
+          <h2 data-i18n="formation2_institution">FIAP</h2>
+        </div>
+        <div class="about-me-section-formation-card">
+          <h1 data-i18n="formation3_title">Java Programmer</h1>
+          <h3 data-i18n="formation3_subtitle">Curso (2018)</h3>
+          <h2 data-i18n="formation3_institution">Impacta</h2>
+        </div>
+        <div class="about-me-section-formation-card">
+          <h1 data-i18n="formation4_title">Android Programmer</h1>
+          <h3 data-i18n="formation4_subtitle">Curso (2019)</h3>
+          <h2 data-i18n="formation4_institution">Impacta</h2>
+        </div>
+        <div class="about-me-section-formation-card">
+          <h1 data-i18n="formation5_title">English Proficiency</h1>
+          <h3 data-i18n="formation5_subtitle">Curso (2019)</h3>
+          <h2 data-i18n="formation5_institution">Wizard</h2>
+        </div>
+        <div class="about-me-section-formation-card">
+          <h1 data-i18n="formation1_title">Ensino Médio Técnico em Informática</h1>
+          <h3 data-i18n="formation1_subtitle">Ensino médio (2018 - 2020)</h3>
+          <h2 data-i18n="formation1_institution">Colégio Eniac</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contact" class="contact-section-wrapper">
+      <div class="contact-section">
+        <div class="contact-tittle">
+          <h2 data-i18n="contact_title">Entre em Contato</h2>
+          <p data-i18n="contact_desc">Tem alguma dúvida ou quer falar comigo?</p>
+          <div class="contact-links">
+            <a href="mailto:pedrooliveiraguimares@gmail.com">
+              <p>pedrooliveiraguimares@gmail.com</p>
+            </a>
+            <!-- Ícones sociais -->
+            <div class="social-icons">
+              <a href="https://linkedin.com/in/olivas-pedro" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/OlivasPedro" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://wa.me/+5511956546614" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="contact-tittle">
+          <a href="https://wa.me/+5511956546614" target="_blank" class="open-to-work">
+            <div class="dot"></div>
+            <span class="text" data-i18n="contact_open_to_work">Open to Work</span>
+          </a>
+          <h3 data-i18n="contact_subtitle">
+            Oportunidades de trabalho remoto ou híbrido em São Paulo
+          </h3>
+        </div>
+      </div>
+    </section>
+
+    <div class="popup-overlay" id="popupProjeto">
+      <div class="popup-content">
+        <button class="popup-close" onclick="fecharPopup()">×</button>
+    
+        <h2 class="popup-titulo">Consulta Rapido BR</h2>
+    
+        <div class="popup-layout">
+          <!-- Coluna Esquerda: Imagens (duas lado a lado) -->
+          <div class="popup-coluna-imagens popup-duas-imagens">
+            <img src="images/app1.jpeg" alt="Imagem 1">
+            <img src="images/app2.jpeg" alt="Imagem 2">
+          </div>
+    
+          <!-- Coluna Direita: Descrição e Tecnologias -->
+          <div class="popup-coluna-conteudo">
+            <p class="popup-descricao">
+              Um aplicativo desenvolvido para o monitoramento remoto da operação logística da empresa. Ele oferece uma visão geral em tempo real das mercadorias, permitindo consultar estatísticas como quantidade em depósito, em trânsito e em carregamento, além de informações detalhadas sobre valor, peso e data de entrada dos produtos.
+            </p>
+    
+            <div class="popup-tecnologias">
+              <div class="popup-tech-wrapper">
+                <div class="popup-tech-container">
+
+                  <div class="popup-tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+                    <span>Java</span>
+                  </div>
+
+                  <div class="popup-tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" />
+                    <span>Android</span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-  
-  <script src="script.js"></script>
-</body>
-</html>
+    
+    
+    <script src="script.js"></script>
+  </body>
+  </html>

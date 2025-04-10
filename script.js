@@ -278,3 +278,24 @@ document.querySelectorAll("[data-i18n]").forEach(el => {
   
 })
 
+
+function abrirPopup() {
+    const popup = document.getElementById("popupProjeto");
+    if (popup) {
+      popup.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function fecharPopup() {
+    const popup = document.getElementById("popupProjeto");
+    if (popup) {
+      popup.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+  }
+
+
+
+
+
