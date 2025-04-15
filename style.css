@@ -951,10 +951,10 @@ nav ul li a:hover {
   
   .popup-duas-imagens {
     display: flex;
-    gap: 16px;
+    gap: 4px;
     border: 1px solid white;
     border-radius: 15px;
-    padding: 24px; /* <– Aqui você pode aumentar de 15px para 24px ou mais */
+    /* padding: 24px; */
     flex: 1.2;
   }
   
@@ -963,7 +963,8 @@ nav ul li a:hover {
     width: 50%;
     height: auto;
     border-radius: 15px;
-    object-fit: cover;
+    object-fit: fill;
+    border: 1px solid white;
   }
   
   
@@ -1024,3 +1025,7 @@ nav ul li a:hover {
     font-weight: bold;
   }
   
+  i {
+    font-size: 70px;
+    margin-bottom: 13px;
+  }

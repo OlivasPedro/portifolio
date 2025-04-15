@@ -194,7 +194,20 @@ document.getElementById("language").addEventListener("change", function() {
         contact_title: "Entre em Contato",
         contact_desc: "Tem alguma dúvida ou quer falar comigo?",
         contact_open_to_work: "Open to Work",
-        contact_subtitle: "Oportunidades de trabalho remoto ou híbrido em São Paulo"
+        contact_subtitle: "Oportunidades de trabalho remoto ou híbrido em São Paulo",
+        timeline7_title: "E também...",
+        timeline7_subtitle: "Janeiro de 2025 - FlyingStudio",
+        timeline7_p1: "Desenvolvi um web app em parceria com a FlyingStudio para tótens interativos, com foco na apresentação de um novo empreendimento imobiliário.",
+        timeline7_p2: "A solução permite que os visitantes explorem o prédio por meio de imagens, tour 360° e informações detalhadas sobre a construção, proporcionando uma experiência moderna, dinâmica e imersiva diretamente nos pontos de visitação.",
+        timeline8_title: "Projeto #4",
+        timeline8_subtitle: "Desenvolvimento do app para tótens",
+        popup1_title: "Consulta Rapido BR (Android)",
+        popup1_desc: "Um aplicativo desenvolvido para o monitoramento remoto da operação logística da empresa. Ele oferece uma visão geral em tempo real das mercadorias, permitindo consultar estatísticas como quantidade em depósito, em trânsito e em carregamento, além de informações detalhadas sobre valor, peso e data de entrada dos produtos.",
+        popup2_title: "Leitor de Etiquetas",
+        popup2_desc: "Um aplicativo desenvolvido para o controle de embarque de cargas nos caminhões da empresa. Ele utiliza a leitura de QR Codes impressos nas etiquetas das mercadorias para registrar automaticamente a baixa no sistema, agilizando o processo logístico e garantindo maior precisão no monitoramento das cargas durante o carregamento.",
+        popup3_title: "Consulta Rapido BR (iOS)",
+        popup3_desc: "Um aplicativo desenvolvido para o monitoramento remoto da operação logística da empresa. Ele oferece uma visão geral em tempo real das mercadorias, permitindo consultar estatísticas como quantidade em depósito, em trânsito e em carregamento, além de informações detalhadas sobre valor, peso e data de entrada dos produtos. O sistema foi reestruturado e migrado para as plataformas móveis, com desenvolvimento nativo em Kotlin para Android e Swift para iOS, garantindo maior desempenho e compatibilidade com os dispositivos atuais.",
+        btnVerProjeto: "➜ Ver Projeto"
       },
       en: {
         page_title: "Pedro de Oliveira's Portfolio",
@@ -261,7 +274,20 @@ document.getElementById("language").addEventListener("change", function() {
         contact_title: "Get In Touch",
         contact_desc: "Have any questions or want to talk?",
         contact_open_to_work: "Open to Work",
-        contact_subtitle: "Remote or hybrid work opportunities in São Paulo"
+        contact_subtitle: "Remote or hybrid work opportunities in São Paulo",
+        timeline7_title: "And also...",
+        timeline7_subtitle: "January 2025 - FlyingStudio",
+        timeline7_p1: "I developed a web app in partnership with FlyingStudio for interactive kiosks, focusing on presenting a new real estate development.",
+        timeline7_p2: "The solution allows visitors to explore the building through images, a 360° tour, and detailed construction information, providing a modern, dynamic, and immersive experience directly at the viewing points.",
+        timeline8_title: "Project #4",
+        timeline8_subtitle: "Development of the kiosk app",
+        popup1_title: "Rapido BR Consultation (Android)",
+        popup1_desc: "An application developed for remote monitoring of the company's logistics operations. It provides a real-time overview of goods, allowing access to statistics such as quantities in storage, in transit, and being loaded, along with detailed information about value, weight, and entry date of the products.",
+        popup2_title: "Label Scanner",
+        popup2_desc: "An application developed to control the loading of cargo onto the company's trucks. It reads QR Codes printed on the merchandise labels to automatically register them in the system, streamlining the logistics process and ensuring greater accuracy during cargo loading.",
+        popup3_title: "Rapido BR Consultation (iOS)",
+        popup3_desc: "An application developed for remote monitoring of the company's logistics operations. It provides a real-time overview of goods, allowing access to statistics such as quantities in storage, in transit, and being loaded, along with detailed information about value, weight, and entry date of the products. The system was restructured and migrated to mobile platforms, with native development in Kotlin for Android and Swift for iOS, ensuring higher performance and better compatibility with modern devices.",
+        btnVerProjeto: "➜ View Project"
       }
     };
 
@@ -294,6 +320,41 @@ function abrirPopup() {
       document.body.style.overflow = "auto";
     }
   }
+
+  function abrirPopup2() {
+    const popup = document.getElementById("popupProjeto2");
+    if (popup) {
+      popup.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function fecharPopup2() {
+    const popup = document.getElementById("popupProjeto2");
+    if (popup) {
+      popup.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+  }
+
+  
+  function abrirPopup3() {
+    const popup = document.getElementById("popupProjeto3");
+    if (popup) {
+      popup.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+  }
+
+  function fecharPopup3() {
+    const popup = document.getElementById("popupProjeto3");
+    if (popup) {
+      popup.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+  }
+
+
 
 
 
